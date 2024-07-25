@@ -8,11 +8,12 @@ import (
 
 	"github.com/cilium/ebpf/rlimit"
 
-	"github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/exec/tracer"
-	"github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/exec/types"
+	// "github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/exec/tracer"
+	// "github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/exec/types"
 
-	// "github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/tcp/tracer"
-	// "github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/tcp/types"
+	"github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/tcp/tracer"
+	"github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/tcp/types"
+
 	// "github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/network/tracer"
 )
 
@@ -26,8 +27,8 @@ func main() {
 	// Define a callback to be called each time there is an event.
 
 	eventCallback := func(event *types.Event) {
-		fmt.Printf("A new %q process with pid %d was executed\n",
-			event.Comm, event.Pid)
+		// fmt.Printf("A new %q process with pid %d was executed\n",event.Comm, event.Pid)
+		fmt.Printf("%v\n",event)
 	}
 
 	// Create the tracer. An empty configuration is passed as we are
