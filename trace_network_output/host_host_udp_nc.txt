@@ -1,0 +1,5 @@
+Timestamp: 2024-07-26T19:19:28.373598895+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 53, Destination Endpoint: {103.57.86.36 4    map[]}
+
+Timestamp: 2024-07-26T19:19:28.373725868+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 53, Destination Endpoint: {103.57.86.36 4    map[]}

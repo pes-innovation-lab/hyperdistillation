@@ -1,0 +1,27 @@
+Timestamp: 2024-07-26T19:13:00.549117336+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: TCP, Port: 8000, Destination Endpoint: {172.17.0.3 4    map[]}
+
+Timestamp: 2024-07-26T19:13:02.387995141+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 443, Destination Endpoint: {104.18.13.149 4    map[]}
+
+Timestamp: 2024-07-26T19:13:02.388075110+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 443, Destination Endpoint: {104.18.13.149 4    map[]}
+
+Timestamp: 2024-07-26T19:13:02.396767451+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: TCP, Port: 443, Destination Endpoint: {104.18.13.149 4    map[]}
+
+Timestamp: 2024-07-26T19:13:02.418761924+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 443, Destination Endpoint: {104.18.13.149 4    map[]}
+
+Timestamp: 2024-07-26T19:13:02.426862773+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 443, Destination Endpoint: {104.18.13.149 4    map[]}
+
+Timestamp: 2024-07-26T19:13:02.434490930+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 443, Destination Endpoint: {104.18.13.149 4    map[]}
+
+Timestamp: 2024-07-26T19:13:02.434681738+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 443, Destination Endpoint: {104.18.13.149 4    map[]}
+
+Timestamp: 2024-07-26T19:13:02.464828603+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 443, Destination Endpoint: {104.18.13.149 4    map[]}
+

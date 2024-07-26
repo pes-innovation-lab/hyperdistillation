@@ -1,0 +1,12 @@
+Timestamp: 2024-07-26T21:09:32.362958151+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: TCP, Port: 8000, Destination Endpoint: {127.0.0.1 4    map[]}
+
+Timestamp: 2024-07-26T21:09:32.362974145+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: HOST, Protocol: TCP, Port: 8000, Destination Endpoint: {127.0.0.1 4    map[]}
+
+Timestamp: 2024-07-26T21:09:32.363396411+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: TCP, Port: 8000, Destination Endpoint: {172.17.0.2 4    map[]}
+
+Timestamp: 2024-07-26T21:09:32.363417293+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: TCP, Port: 8000, Destination Endpoint: {172.17.0.2 4    map[]}
+

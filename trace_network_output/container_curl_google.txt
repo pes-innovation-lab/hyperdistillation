@@ -1,0 +1,30 @@
+// DNS Server for the host: 103.57.86.36 
+// google.com resolves to 142.250.183.78
+
+Timestamp: 2024-07-26T18:50:21.229646573+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 53, Destination Endpoint: {103.57.86.36 4    map[]}
+
+Timestamp: 2024-07-26T18:50:21.229828791+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 53, Destination Endpoint: {103.57.86.36 4    map[]}
+
+Timestamp: 2024-07-26T18:50:21.260219899+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 53, Destination Endpoint: {103.57.86.36 4    map[]}
+
+Timestamp: 2024-07-26T18:50:21.670515501+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: HOST, Protocol: UDP, Port: 53, Destination Endpoint: {172.17.0.3 4    map[]}
+
+Timestamp: 2024-07-26T18:50:21.670547488+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 53, Destination Endpoint: {103.57.86.11 4    map[]}
+
+Timestamp: 2024-07-26T18:50:21.670581851+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: HOST, Protocol: UDP, Port: 53, Destination Endpoint: {172.17.0.3 4    map[]}
+
+Timestamp: 2024-07-26T18:50:21.670591279+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: UDP, Port: 53, Destination Endpoint: {103.57.86.11 4    map[]}
+
+Timestamp: 2024-07-26T18:50:21.693103635+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: HOST, Protocol: TCP, Port: 80, Destination Endpoint: {172.17.0.3 4    map[]}
+
+Timestamp: 2024-07-26T18:50:21.693158112+05:30, Type: normal, Mount Ns ID: 0, Network Ns ID: 4026531840
+Packet Type: OUTGOING, Protocol: TCP, Port: 80, Destination Endpoint: {142.250.183.78 4    map[]}
+
