@@ -1,0 +1,54 @@
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T23:02:59.017901404+05:30, Type: normal, Message: , Mount Namespace: 4026532748
+Operation: connect, Pid: 27615, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 47264, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T23:02:59.018123363+05:30, Type: normal, Message: , Mount Namespace: 4026532851
+Operation: accept, Pid: 27454, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 47264, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T23:02:59.020669668+05:30, Type: normal, Message: , Mount Namespace: 4026532748
+Operation: close, Pid: 27615, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 47264, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T23:02:59.020724075+05:30, Type: normal, Message: , Mount Namespace: 4026532851
+Operation: close, Pid: 27454, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 47264, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T23:02:59.234359824+05:30, Type: normal, Message: , Mount Namespace: 4026532448
+Operation: close, Pid: 864, Uid: 193 ,Gid: 193, Comm: systemd-resolve, IP version: 4
+Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 52672, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 5355, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T23:02:59.484315376+05:30, Type: normal, Message: , Mount Namespace: 4026532448
+Operation: close, Pid: 864, Uid: 193 ,Gid: 193, Comm: systemd-resolve, IP version: 4
+Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 43680, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 5355, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T23:03:07.915126905+05:30, Type: normal, Message: , Mount Namespace: 4026532851
+Operation: connect, Pid: 27618, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 38810, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T23:03:07.915363460+05:30, Type: normal, Message: , Mount Namespace: 4026532748
+Operation: accept, Pid: 27617, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 38810, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T23:03:07.917990503+05:30, Type: normal, Message: , Mount Namespace: 4026532748
+Operation: close, Pid: 27617, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 38810, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T23:03:07.917982820+05:30, Type: normal, Message: , Mount Namespace: 4026532851
+Operation: close, Pid: 27618, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 38810, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+
+ STOPPING TRACE AND GENERATING GRAPHS
+STARTING GRAPH GENERATION
