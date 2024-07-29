@@ -1,0 +1,259 @@
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:13.735478887+05:30, Type: normal, Message: , Mount Namespace: 4026533015
+Operation: connect, Pid: 15500, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 39824, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:13.735645880+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: accept, Pid: 12065, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 39824, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:13.738259651+05:30, Type: normal, Message: , Mount Namespace: 4026533015
+Operation: close, Pid: 15500, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 39824, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:13.738325093+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: close, Pid: 12065, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 39824, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:33.343758289+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: connect, Pid: 15505, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 46828, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:33.343942812+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: accept, Pid: 12065, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.4 4    map[]}, Dst Port: 46828, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:33.345458455+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: close, Pid: 15505, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 46828, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:33.345444138+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: close, Pid: 12065, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.4 4    map[]}, Dst Port: 46828, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:50.723671463+05:30, Type: normal, Message: , Mount Namespace: 4026533015
+Operation: close, Pid: 15510, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 38568, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:55.087638306+05:30, Type: normal, Message: , Mount Namespace: 4026533015
+Operation: connect, Pid: 15513, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 33778, Src Proto: 0, Dst Endpoint: {172.17.0.4 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:55.087802714+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: accept, Pid: 15509, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 33778, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:55.090778617+05:30, Type: normal, Message: , Mount Namespace: 4026533015
+Operation: close, Pid: 15513, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 33778, Src Proto: 0, Dst Endpoint: {172.17.0.4 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:15:55.091012588+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: close, Pid: 15509, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 33778, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:08.357533955+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: connect, Pid: 15517, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 51576, Src Proto: 0, Dst Endpoint: {172.17.0.4 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:08.357686560+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: accept, Pid: 15509, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 51576, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:08.359154362+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: close, Pid: 15509, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 51576, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:08.359228744+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: close, Pid: 15517, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 51576, Src Proto: 0, Dst Endpoint: {172.17.0.4 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:12.247884020+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 15526, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 47812, Src Proto: 0, Dst Endpoint: {172.17.0.4 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:12.248032853+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: accept, Pid: 15509, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.1 4    map[]}, Dst Port: 47812, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:12.251146484+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: close, Pid: 15509, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.1 4    map[]}, Dst Port: 47812, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:12.251252016+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: close, Pid: 15526, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 47812, Src Proto: 0, Dst Endpoint: {172.17.0.4 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:15.294628821+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 15541, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 6
+Src Endpoint: {::1 6    map[]}, Src Port: 41274, Src Proto: 0, Dst Endpoint: {::1 6    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:15.294785407+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: accept, Pid: 13926, Uid: 0 ,Gid: 0, Comm: docker-proxy, IP version: 6
+Src Endpoint: {::1 6    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {::1 6    map[]}, Dst Port: 41274, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:15.295023429+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 13926, Uid: 0 ,Gid: 0, Comm: docker-proxy, IP version: 4
+Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 47814, Src Proto: 0, Dst Endpoint: {172.17.0.4 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:15.295154453+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: accept, Pid: 15509, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.1 4    map[]}, Dst Port: 47814, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:15.297843234+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: close, Pid: 15509, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.1 4    map[]}, Dst Port: 47814, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:15.298136152+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: close, Pid: 15541, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 6
+Src Endpoint: {::1 6    map[]}, Src Port: 41274, Src Proto: 0, Dst Endpoint: {::1 6    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:15.298484874+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: close, Pid: 13926, Uid: 0 ,Gid: 0, Comm: docker-proxy, IP version: 6
+Src Endpoint: {::1 6    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {::1 6    map[]}, Dst Port: 41274, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:15.298530201+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: close, Pid: 13926, Uid: 0 ,Gid: 0, Comm: docker-proxy, IP version: 4
+Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 47814, Src Proto: 0, Dst Endpoint: {172.17.0.4 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:30.088668207+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 15566, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 44430, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:30.088806565+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: accept, Pid: 15551, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.1 4    map[]}, Dst Port: 44430, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:30.091286728+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: close, Pid: 15551, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.1 4    map[]}, Dst Port: 44430, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:30.091490178+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: close, Pid: 15566, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 44430, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:34.282744827+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 15581, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 6
+Src Endpoint: {2409:40f2:128:da4b:1bd8:adc6:581e:1ba7 6    map[]}, Src Port: 49974, Src Proto: 0, Dst Endpoint: {2404:6800:4007:805::200e 6    map[]}, Dst Port: 80, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:34.607089610+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: close, Pid: 15581, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 6
+Src Endpoint: {2409:40f2:128:da4b:1bd8:adc6:581e:1ba7 6    map[]}, Src Port: 49974, Src Proto: 0, Dst Endpoint: {2404:6800:4007:805::200e 6    map[]}, Dst Port: 80, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:38.306512310+05:30, Type: normal, Message: , Mount Namespace: 4026533015
+Operation: connect, Pid: 15592, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 52416, Src Proto: 0, Dst Endpoint: {142.250.67.78 4    map[]}, Dst Port: 80, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:38.634951726+05:30, Type: normal, Message: , Mount Namespace: 4026533015
+Operation: close, Pid: 15592, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 52416, Src Proto: 0, Dst Endpoint: {142.250.67.78 4    map[]}, Dst Port: 80, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:45.586405849+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: connect, Pid: 15596, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 44016, Src Proto: 0, Dst Endpoint: {142.250.67.78 4    map[]}, Dst Port: 80, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:45.922882765+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: close, Pid: 15596, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 44016, Src Proto: 0, Dst Endpoint: {142.250.67.78 4    map[]}, Dst Port: 80, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:50.194241210+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: connect, Pid: 15600, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 38440, Src Proto: 0, Dst Endpoint: {142.250.67.78 4    map[]}, Dst Port: 80, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:16:50.657110337+05:30, Type: normal, Message: , Mount Namespace: 4026532761
+Operation: close, Pid: 15600, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {172.17.0.4 4    map[]}, Src Port: 38440, Src Proto: 0, Dst Endpoint: {142.250.67.78 4    map[]}, Dst Port: 80, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:17:13.241224408+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 2400, Uid: 1000 ,Gid: 1000, Comm: Chrome_ChildIOT, IP version: 6
+Src Endpoint: {2409:40f2:128:da4b:1bd8:adc6:581e:1ba7 6    map[]}, Src Port: 37236, Src Proto: 0, Dst Endpoint: {64:ff9b::6812:2007 6    map[]}, Dst Port: 443, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:17:14.899165645+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 2400, Uid: 1000 ,Gid: 1000, Comm: Chrome_ChildIOT, IP version: 6
+Src Endpoint: {2409:40f2:128:da4b:1bd8:adc6:581e:1ba7 6    map[]}, Src Port: 58908, Src Proto: 0, Dst Endpoint: {64:ff9b::ac40:92df 6    map[]}, Dst Port: 443, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:17:14.951723924+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 2400, Uid: 1000 ,Gid: 1000, Comm: Chrome_ChildIOT, IP version: 6
+Src Endpoint: {2409:40f2:128:da4b:1bd8:adc6:581e:1ba7 6    map[]}, Src Port: 47696, Src Proto: 0, Dst Endpoint: {2a04:fa87:fffe::c000:4902 6    map[]}, Dst Port: 443, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:17:15.171367918+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 2400, Uid: 1000 ,Gid: 1000, Comm: Chrome_ChildIOT, IP version: 6
+Src Endpoint: {2409:40f2:128:da4b:1bd8:adc6:581e:1ba7 6    map[]}, Src Port: 49296, Src Proto: 0, Dst Endpoint: {2a03:2880:f037:113:face:b00c:0:2 6    map[]}, Dst Port: 443, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:17:15.732666711+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 2400, Uid: 1000 ,Gid: 1000, Comm: Chrome_ChildIOT, IP version: 6
+Src Endpoint: {2409:40f2:128:da4b:1bd8:adc6:581e:1ba7 6    map[]}, Src Port: 43278, Src Proto: 0, Dst Endpoint: {2a03:2880:f037:1a:face:b00c:0:3 6    map[]}, Dst Port: 443, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:17:17.129942542+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 2400, Uid: 1000 ,Gid: 1000, Comm: Chrome_ChildIOT, IP version: 6
+Src Endpoint: {2409:40f2:128:da4b:1bd8:adc6:581e:1ba7 6    map[]}, Src Port: 34152, Src Proto: 0, Dst Endpoint: {2606:4700:83b3:a609:23b:4d1:67e7:2f03 6    map[]}, Dst Port: 443, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:17:27.707447719+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: connect, Pid: 2400, Uid: 1000 ,Gid: 1000, Comm: Chrome_ChildIOT, IP version: 6
+Src Endpoint: {2409:40f2:128:da4b:1bd8:adc6:581e:1ba7 6    map[]}, Src Port: 57478, Src Proto: 0, Dst Endpoint: {2405:200:1630:ff44:face:b00c:0:a7 6    map[]}, Dst Port: 443, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:17:55.270277102+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: close, Pid: 15765, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {127.0.0.1 4    map[]}, Src Port: 55048, Src Proto: 0, Dst Endpoint: {127.0.0.1 4    map[]}, Dst Port: 80, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:17:57.706673698+05:30, Type: normal, Message: , Mount Namespace: 4026532861
+Operation: close, Pid: 15769, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Src Endpoint: {127.0.0.1 4    map[]}, Src Port: 46644, Src Proto: 0, Dst Endpoint: {127.0.0.1 4    map[]}, Dst Port: 8000, Dst Proto: 0
+
+Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Timestamp: 2024-07-29T17:17:58.066399374+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Operation: close, Pid: 2400, Uid: 1000 ,Gid: 1000, Comm: Chrome_ChildIOT, IP version: 6
+Src Endpoint: {2409:40f2:128:da4b:1bd8:adc6:581e:1ba7 6    map[]}, Src Port: 47696, Src Proto: 0, Dst Endpoint: {2a04:fa87:fffe::c000:4902 6    map[]}, Dst Port: 443, Dst Proto: 0
+
+
+ STOPPING TRACE AND GENERATING GRAPHS
+STARTING GRAPH GENERATION

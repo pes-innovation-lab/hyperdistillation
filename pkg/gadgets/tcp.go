@@ -6,6 +6,7 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/PES-Innovation-Lab/hyperdistillation/pkg/graph"
 	"github.com/cilium/ebpf/rlimit"
 
 	"github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/tcp/tracer"
@@ -19,11 +20,17 @@ func TraceTcp() {
 		return
 	}
 
-	// Define a callback to be called each time there is an event.
+	var tcpEvents []*types.Event
 
+	// Define a callback to be called each time there is an event.
 	eventCallback := func(event *types.Event) {
-		// fmt.Printf("A new %q process with pid %d was executed\n",event.Comm, event.Pid)
-		fmt.Printf("%v\n",event)
+		// Store all events
+		tcpEvents = append(tcpEvents, event)
+
+		fmt.Printf("\nRuntime: %s, Container ID: %s, Container Name: %s, Container Image Name: %s, Container Image Digest: %s\n", event.Runtime.RuntimeName, event.Runtime.ContainerID, event.Runtime.ContainerName, event.Runtime.ContainerImageName, event.Runtime.ContainerImageDigest)
+		fmt.Printf("Timestamp: %v, Type: %s, Message: %s, Mount Namespace: %v\n", event.Timestamp, event.Type, event.Message, event.MountNsID)
+		fmt.Printf("Operation: %s, Pid: %d, Uid: %d ,Gid: %d, Comm: %s, IP version: %d\n", event.Operation, event.Pid, event.Uid, event.Gid, event.Comm, event.IPVersion)
+		fmt.Printf("Src Endpoint: %v, Src Port: %d, Src Proto: %d, Dst Endpoint: %v, Dst Port: %d, Dst Proto: %d\n", event.SrcEndpoint.L3Endpoint, event.SrcEndpoint.Port, event.SrcEndpoint.Proto, event.DstEndpoint.L3Endpoint, event.DstEndpoint.Port, event.DstEndpoint.Proto)
 	}
 
 	// Create the tracer. An empty configuration is passed as we are
@@ -31,17 +38,25 @@ func TraceTcp() {
 	// reason, no enricher is passed.
 
 	tracer, err := tracer.NewTracer(&tracer.Config{}, nil, eventCallback)
-
-	// tracer , err := tracer.NewTracer()
 	if err != nil {
 		fmt.Printf("error creating tracer: %s\n", err)
 		return
 	}
-	defer tracer.Stop()
-	// defer tracer.Close()
 
-	// Graceful shutdown
-	exit := make(chan os.Signal, 1)
-	signal.Notify(exit, syscall.SIGINT, syscall.SIGTERM)
+	// Listen for SIGINT, generate DAG and exit gracefully
+	sigChan := make(chan os.Signal, 1)
+	exit := make(chan struct{}, 1)
+	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
+
+	go func() {
+		<-sigChan
+
+		fmt.Printf("\n\n STOPPING TRACE AND GENERATING GRAPHS\n")
+		graph.GenerateGraph(tcpEvents)
+		tracer.Stop()
+
+		exit <- struct{}{}
+	}()
+
 	<-exit
 }
