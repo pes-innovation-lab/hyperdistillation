@@ -40,27 +40,20 @@ func GenerateGraph(events []*MetaEvent) {
 	}
 
 	// Initialise graph
-	g := graph.New(nodeHash, graph.Directed(), graph.PreventCycles())
+	g := graph.New(nodeHash, graph.Directed(), graph.Acyclic())
 
 	// Create a hashmap to keep track of all nodes in the graph
 	nodeMap := make(map[string]graphNode)
 
 	for _, event := range events {
-
-		if event.Event.Operation == "close" {
+		// Ignoring tcp "close events"
+		if event.Event.Operation == "close" || event.Event.Operation == "accept" {
 			continue
 		}
-
-		// srcIp := getIp(graphNode.Event, src)
-		// dstIp := getIp(graphNode.Event, dst)
-
-		// srcIp, dstIp = appendPorts(event, srcIp, dstIp)
 
 		// If the ip is already a node then don't add another node
 		_, ok := nodeMap[event.SrcContainerName]
 		if !ok {
-			// If IP is localhost, then append port to the end
-
 			// create node in the graph
 			err := g.AddVertex(event.SrcContainerName)
 			if err != nil {
@@ -75,11 +68,8 @@ func GenerateGraph(events []*MetaEvent) {
 		}
 		_, ok = nodeMap[event.DstContainerName]
 		if !ok {
-			// If IP is localhost, then append port to the end
-
 			// create node in the graph
 			err := g.AddVertex(event.DstContainerName)
-			fmt.Println("adding ")
 			if err != nil {
 				panic(err)
 			}
@@ -93,8 +83,9 @@ func GenerateGraph(events []*MetaEvent) {
 
 		err := g.AddEdge(event.SrcContainerName, event.DstContainerName)
 		if err != nil {
-			continue
+			fmt.Printf("Unable to create edge from %s to %s\n", event.SrcContainerName, event.DstContainerName)
 		}
+		fmt.Printf("Trying to make edge from %s to %s\n", event.SrcContainerName, event.DstContainerName)
 	}
 
 	file, err := os.Create("./graph.gv")

@@ -1,0 +1,381 @@
+
+
+Docker API: Src Container Name: pinger, Dst Container Name: pinger2
+Docker API: Src Container IP: 172.17.0.2, Dst Container IP: 172.17.0.3
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:14.607915214+05:30, Type: normal, Message: , Mount Namespace: 4026532805
+Trace Data: Operation: connect, Pid: 76516, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 42298, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 8000, Dst Proto: 0
+Meta Event Created: {0xc0053f2000 172.17.0.2 172.17.0.3 pinger pinger2}
+
+
+Docker API: Src Container Name: pinger, Dst Container Name: pinger2
+Docker API: Src Container IP: 172.17.0.2, Dst Container IP: 172.17.0.3
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:14.612178953+05:30, Type: normal, Message: , Mount Namespace: 4026532805
+Trace Data: Operation: close, Pid: 76516, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 42298, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 8000, Dst Proto: 0
+Meta Event Created: {0xc0032f0000 172.17.0.2 172.17.0.3 pinger pinger2}
+
+
+Docker API: Src Container Name: pinger2, Dst Container Name: pinger
+Docker API: Src Container IP: 172.17.0.3, Dst Container IP: 172.17.0.2
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:14.608267479+05:30, Type: normal, Message: , Mount Namespace: 4026534596
+Trace Data: Operation: accept, Pid: 76268, Uid: 0 ,Gid: 0, Comm: python, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 42298, Dst Proto: 0
+Meta Event Created: {0xc0032f0540 172.17.0.3 172.17.0.2 pinger2 pinger}
+
+
+Docker API: Src Container Name: pinger2, Dst Container Name: pinger
+Docker API: Src Container IP: 172.17.0.3, Dst Container IP: 172.17.0.2
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:14.612219310+05:30, Type: normal, Message: , Mount Namespace: 4026534596
+Trace Data: Operation: close, Pid: 76268, Uid: 0 ,Gid: 0, Comm: python, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 42298, Dst Proto: 0
+Meta Event Created: {0xc0032f0a80 172.17.0.3 172.17.0.2 pinger2 pinger}
+
+
+Docker API: Src Container Name: pinger, Dst Container Name: 
+Docker API: Src Container IP: 172.17.0.2, Dst Container IP: 142.250.67.206
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:17.562498721+05:30, Type: normal, Message: , Mount Namespace: 4026532805
+Trace Data: Operation: connect, Pid: 76526, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 46984, Src Proto: 0, Dst Endpoint: {142.250.67.206 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc0031821c0 172.17.0.2 142.250.67.206 pinger 142.250.67.206}
+
+
+Docker API: Src Container Name: pinger, Dst Container Name: 
+Docker API: Src Container IP: 172.17.0.2, Dst Container IP: 142.250.67.206
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:17.935040268+05:30, Type: normal, Message: , Mount Namespace: 4026532805
+Trace Data: Operation: close, Pid: 76526, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 46984, Src Proto: 0, Dst Endpoint: {142.250.67.206 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc0031828c0 172.17.0.2 142.250.67.206 pinger 142.250.67.206}
+
+
+Docker API: Src Container Name: , Dst Container Name: net_c
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 172.20.0.2
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:25.667164289+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: connect, Pid: 76542, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.20.0.1 4    map[]}, Src Port: 39316, Src Proto: 0, Dst Endpoint: {172.20.0.2 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc0053f2700 127.0.0.1 172.20.0.2 HOST net_c}
+
+
+Docker API: Src Container Name: , Dst Container Name: net_c
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 172.20.0.2
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:25.668076971+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: close, Pid: 76542, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.20.0.1 4    map[]}, Src Port: 39316, Src Proto: 0, Dst Endpoint: {172.20.0.2 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc0032f0fc0 127.0.0.1 172.20.0.2 HOST net_c}
+
+
+Docker API: Src Container Name: net_c, Dst Container Name: 
+Docker API: Src Container IP: 172.20.0.2, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:25.667331492+05:30, Type: normal, Message: , Mount Namespace: 4026534248
+Trace Data: Operation: accept, Pid: 60961, Uid: 101 ,Gid: 101, Comm: nginx, IP version: 4
+Trace Data: Src Endpoint: {172.20.0.2 4    map[]}, Src Port: 80, Src Proto: 0, Dst Endpoint: {172.20.0.1 4    map[]}, Dst Port: 39316, Dst Proto: 0
+Meta Event Created: {0xc0032f1500 172.20.0.2 127.0.0.1 net_c HOST}
+
+
+Docker API: Src Container Name: net_c, Dst Container Name: 
+Docker API: Src Container IP: 172.20.0.2, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:25.668193390+05:30, Type: normal, Message: , Mount Namespace: 4026534248
+Trace Data: Operation: close, Pid: 60961, Uid: 101 ,Gid: 101, Comm: nginx, IP version: 4
+Trace Data: Src Endpoint: {172.20.0.2 4    map[]}, Src Port: 80, Src Proto: 0, Dst Endpoint: {172.20.0.1 4    map[]}, Dst Port: 39316, Dst Proto: 0
+Meta Event Created: {0xc0053f2c40 172.20.0.2 127.0.0.1 net_c HOST}
+
+
+Docker API: Src Container Name: , Dst Container Name: 
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:27.287842582+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: connect, Pid: 76546, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 6
+Trace Data: Src Endpoint: {::1 6    map[]}, Src Port: 59832, Src Proto: 0, Dst Endpoint: {::1 6    map[]}, Dst Port: 8000, Dst Proto: 0
+Meta Event Created: {0xc0032f1a40 127.0.0.1 127.0.0.1 HOST HOST}
+
+
+Docker API: Src Container Name: , Dst Container Name: 
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:27.288101708+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: accept, Pid: 65988, Uid: 0 ,Gid: 0, Comm: docker-proxy, IP version: 6
+Trace Data: Src Endpoint: {::1 6    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {::1 6    map[]}, Dst Port: 59832, Dst Proto: 0
+Meta Event Created: {0xc003604000 127.0.0.1 127.0.0.1 HOST HOST}
+
+
+Docker API: Src Container Name: , Dst Container Name: 
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:27.298156983+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: close, Pid: 76546, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 6
+Trace Data: Src Endpoint: {::1 6    map[]}, Src Port: 59832, Src Proto: 0, Dst Endpoint: {::1 6    map[]}, Dst Port: 8000, Dst Proto: 0
+Meta Event Created: {0xc003182e00 127.0.0.1 127.0.0.1 HOST HOST}
+
+
+Docker API: Src Container Name: net_c2, Dst Container Name: 
+Docker API: Src Container IP: 172.20.0.3, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:27.295717944+05:30, Type: normal, Message: , Mount Namespace: 4026535793
+Trace Data: Operation: accept, Pid: 66092, Uid: 101 ,Gid: 101, Comm: nginx, IP version: 4
+Trace Data: Src Endpoint: {172.20.0.3 4    map[]}, Src Port: 80, Src Proto: 0, Dst Endpoint: {172.20.0.1 4    map[]}, Dst Port: 42516, Dst Proto: 0
+Meta Event Created: {0xc003183340 172.20.0.3 127.0.0.1 net_c2 HOST}
+
+
+Docker API: Src Container Name: , Dst Container Name: net_c2
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 172.20.0.3
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:27.292560263+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: connect, Pid: 65988, Uid: 0 ,Gid: 0, Comm: docker-proxy, IP version: 4
+Trace Data: Src Endpoint: {172.20.0.1 4    map[]}, Src Port: 42516, Src Proto: 0, Dst Endpoint: {172.20.0.3 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc0053f3180 127.0.0.1 172.20.0.3 HOST net_c2}
+
+
+Docker API: Src Container Name: net_c2, Dst Container Name: 
+Docker API: Src Container IP: 172.20.0.3, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:27.298404941+05:30, Type: normal, Message: , Mount Namespace: 4026535793
+Trace Data: Operation: close, Pid: 66092, Uid: 101 ,Gid: 101, Comm: nginx, IP version: 4
+Trace Data: Src Endpoint: {172.20.0.3 4    map[]}, Src Port: 80, Src Proto: 0, Dst Endpoint: {172.20.0.1 4    map[]}, Dst Port: 42516, Dst Proto: 0
+Meta Event Created: {0xc0053f36c0 172.20.0.3 127.0.0.1 net_c2 HOST}
+
+
+Docker API: Src Container Name: , Dst Container Name: 
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:27.298676146+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: close, Pid: 65988, Uid: 0 ,Gid: 0, Comm: docker-proxy, IP version: 6
+Trace Data: Src Endpoint: {::1 6    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {::1 6    map[]}, Dst Port: 59832, Dst Proto: 0
+Meta Event Created: {0xc0053f3c00 127.0.0.1 127.0.0.1 HOST HOST}
+
+
+Docker API: Src Container Name: , Dst Container Name: net_c2
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 172.20.0.3
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:27.298712961+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: close, Pid: 65988, Uid: 0 ,Gid: 0, Comm: docker-proxy, IP version: 4
+Trace Data: Src Endpoint: {172.20.0.1 4    map[]}, Src Port: 42516, Src Proto: 0, Dst Endpoint: {172.20.0.3 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc003183880 127.0.0.1 172.20.0.3 HOST net_c2}
+
+
+Docker API: Src Container Name: , Dst Container Name: pinger
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 172.17.0.2
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:28.762592551+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: connect, Pid: 76552, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 60732, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc0030e7880 127.0.0.1 172.17.0.2 HOST pinger}
+
+
+Docker API: Src Container Name: pinger, Dst Container Name: 
+Docker API: Src Container IP: 172.17.0.2, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:28.762778027+05:30, Type: normal, Message: , Mount Namespace: 4026532805
+Trace Data: Operation: accept, Pid: 76536, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 80, Src Proto: 0, Dst Endpoint: {172.17.0.1 4    map[]}, Dst Port: 60732, Dst Proto: 0
+Meta Event Created: {0xc00391a000 172.17.0.2 127.0.0.1 pinger HOST}
+
+
+Docker API: Src Container Name: pinger, Dst Container Name: 
+Docker API: Src Container IP: 172.17.0.2, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:28.765719861+05:30, Type: normal, Message: , Mount Namespace: 4026532805
+Trace Data: Operation: close, Pid: 76536, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 80, Src Proto: 0, Dst Endpoint: {172.17.0.1 4    map[]}, Dst Port: 60732, Dst Proto: 0
+Meta Event Created: {0xc00391a540 172.17.0.2 127.0.0.1 pinger HOST}
+
+
+Docker API: Src Container Name: , Dst Container Name: pinger
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 172.17.0.2
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:28.765726394+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: close, Pid: 76552, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 60732, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc003604540 127.0.0.1 172.17.0.2 HOST pinger}
+
+
+Docker API: Src Container Name: , Dst Container Name: 
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 2401:4900:50:9::280
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:30.604619259+05:30, Type: normal, Message: , Mount Namespace: 4026532486
+Trace Data: Operation: connect, Pid: 754, Uid: 991 ,Gid: 991, Comm: systemd-resolve, IP version: 6
+Trace Data: Src Endpoint: {2401:4900:1cc5:3f7b:5c31:df18:2d85:349c 6    map[]}, Src Port: 53152, Src Proto: 0, Dst Endpoint: {2401:4900:50:9::280 6    map[]}, Dst Port: 53, Dst Proto: 0
+Meta Event Created: {0xc00391aa80 127.0.0.1 2401:4900:50:9::280 HOST 2401:4900:50:9::280}
+
+
+Docker API: Src Container Name: , Dst Container Name: 
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 185.125.190.97
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:30.794104125+05:30, Type: normal, Message: , Mount Namespace: 4026532654
+Trace Data: Operation: connect, Pid: 925, Uid: 0 ,Gid: 0, Comm: NetworkManager, IP version: 4
+Trace Data: Src Endpoint: {192.168.1.7 4    map[]}, Src Port: 41190, Src Proto: 0, Dst Endpoint: {185.125.190.97 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc003183dc0 127.0.0.1 185.125.190.97 HOST 185.125.190.97}
+
+
+Docker API: Src Container Name: , Dst Container Name: 
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 185.125.190.97
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:30.972751491+05:30, Type: normal, Message: , Mount Namespace: 4026532654
+Trace Data: Operation: close, Pid: 925, Uid: 0 ,Gid: 0, Comm: NetworkManager, IP version: 4
+Trace Data: Src Endpoint: {192.168.1.7 4    map[]}, Src Port: 41190, Src Proto: 0, Dst Endpoint: {185.125.190.97 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc003a08380 127.0.0.1 185.125.190.97 HOST 185.125.190.97}
+
+
+Docker API: Src Container Name: , Dst Container Name: pinger2
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 172.17.0.3
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:31.136319965+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: close, Pid: 76562, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 56512, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc00391afc0 127.0.0.1 172.17.0.3 HOST pinger2}
+
+
+Docker API: Src Container Name: , Dst Container Name: 
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 2001:67c:1562::24
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:32.862433772+05:30, Type: normal, Message: , Mount Namespace: 4026532654
+Trace Data: Operation: connect, Pid: 925, Uid: 0 ,Gid: 0, Comm: NetworkManager, IP version: 6
+Trace Data: Src Endpoint: {2401:4900:1cc5:3f7b:5c31:df18:2d85:349c 6    map[]}, Src Port: 54248, Src Proto: 0, Dst Endpoint: {2001:67c:1562::24 6    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc00391b500 127.0.0.1 2001:67c:1562::24 HOST 2001:67c:1562::24}
+
+
+Docker API: Src Container Name: , Dst Container Name: 
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 2001:67c:1562::24
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:33.124544865+05:30, Type: normal, Message: , Mount Namespace: 4026532654
+Trace Data: Operation: close, Pid: 925, Uid: 0 ,Gid: 0, Comm: NetworkManager, IP version: 6
+Trace Data: Src Endpoint: {2401:4900:1cc5:3f7b:5c31:df18:2d85:349c 6    map[]}, Src Port: 54248, Src Proto: 0, Dst Endpoint: {2001:67c:1562::24 6    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc003604a80 127.0.0.1 2001:67c:1562::24 HOST 2001:67c:1562::24}
+
+
+Docker API: Src Container Name: , Dst Container Name: pinger2
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 172.17.0.3
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:33.979560510+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: connect, Pid: 76568, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 60408, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 8000, Dst Proto: 0
+Meta Event Created: {0xc00391ba40 127.0.0.1 172.17.0.3 HOST pinger2}
+
+
+Docker API: Src Container Name: pinger2, Dst Container Name: 
+Docker API: Src Container IP: 172.17.0.3, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:33.980181203+05:30, Type: normal, Message: , Mount Namespace: 4026534596
+Trace Data: Operation: accept, Pid: 76268, Uid: 0 ,Gid: 0, Comm: python, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.1 4    map[]}, Dst Port: 60408, Dst Proto: 0
+Meta Event Created: {0xc003ae2000 172.17.0.3 127.0.0.1 pinger2 HOST}
+
+
+Docker API: Src Container Name: , Dst Container Name: pinger2
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 172.17.0.3
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:33.985002482+05:30, Type: normal, Message: , Mount Namespace: 4026531841
+Trace Data: Operation: close, Pid: 76568, Uid: 1000 ,Gid: 1000, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.1 4    map[]}, Src Port: 60408, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 8000, Dst Proto: 0
+Meta Event Created: {0xc003a088c0 127.0.0.1 172.17.0.3 HOST pinger2}
+
+
+Docker API: Src Container Name: pinger2, Dst Container Name: 
+Docker API: Src Container IP: 172.17.0.3, Dst Container IP: 127.0.0.1
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:33.984912999+05:30, Type: normal, Message: , Mount Namespace: 4026534596
+Trace Data: Operation: close, Pid: 76268, Uid: 0 ,Gid: 0, Comm: python, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 8000, Src Proto: 0, Dst Endpoint: {172.17.0.1 4    map[]}, Dst Port: 60408, Dst Proto: 0
+Meta Event Created: {0xc003ae2540 172.17.0.3 127.0.0.1 pinger2 HOST}
+
+
+Docker API: Src Container Name: , Dst Container Name: 
+Docker API: Src Container IP: 127.0.0.1, Dst Container IP: 2401:4900:50:9::280
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:42.770233745+05:30, Type: normal, Message: , Mount Namespace: 4026532486
+Trace Data: Operation: close, Pid: 754, Uid: 991 ,Gid: 991, Comm: systemd-resolve, IP version: 6
+Trace Data: Src Endpoint: {2401:4900:1cc5:3f7b:5c31:df18:2d85:349c 6    map[]}, Src Port: 53152, Src Proto: 0, Dst Endpoint: {2401:4900:50:9::280 6    map[]}, Dst Port: 53, Dst Proto: 0
+Meta Event Created: {0xc003ae2a80 127.0.0.1 2401:4900:50:9::280 HOST 2401:4900:50:9::280}
+
+
+Docker API: Src Container Name: pinger2, Dst Container Name: pinger
+Docker API: Src Container IP: 172.17.0.3, Dst Container IP: 172.17.0.2
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:44.172295335+05:30, Type: normal, Message: , Mount Namespace: 4026534596
+Trace Data: Operation: connect, Pid: 76575, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 41682, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc003604fc0 172.17.0.3 172.17.0.2 pinger2 pinger}
+
+
+Docker API: Src Container Name: pinger, Dst Container Name: pinger2
+Docker API: Src Container IP: 172.17.0.2, Dst Container IP: 172.17.0.3
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:44.172537190+05:30, Type: normal, Message: , Mount Namespace: 4026532805
+Trace Data: Operation: accept, Pid: 76536, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 80, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 41682, Dst Proto: 0
+Meta Event Created: {0xc003605500 172.17.0.2 172.17.0.3 pinger pinger2}
+
+
+Docker API: Src Container Name: pinger2, Dst Container Name: pinger
+Docker API: Src Container IP: 172.17.0.3, Dst Container IP: 172.17.0.2
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:44.175204996+05:30, Type: normal, Message: , Mount Namespace: 4026534596
+Trace Data: Operation: close, Pid: 76575, Uid: 0 ,Gid: 0, Comm: curl, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.3 4    map[]}, Src Port: 41682, Src Proto: 0, Dst Endpoint: {172.17.0.2 4    map[]}, Dst Port: 80, Dst Proto: 0
+Meta Event Created: {0xc003605a40 172.17.0.3 172.17.0.2 pinger2 pinger}
+
+
+Docker API: Src Container Name: pinger, Dst Container Name: pinger2
+Docker API: Src Container IP: 172.17.0.2, Dst Container IP: 172.17.0.3
+
+Trace Data: Runtime: , Container ID: , Container Name: , Container Image Name: , Container Image Digest: 
+Trace Data: Timestamp: 2024-07-30T17:35:44.175238688+05:30, Type: normal, Message: , Mount Namespace: 4026532805
+Trace Data: Operation: close, Pid: 76536, Uid: 0 ,Gid: 0, Comm: python3, IP version: 4
+Trace Data: Src Endpoint: {172.17.0.2 4    map[]}, Src Port: 80, Src Proto: 0, Dst Endpoint: {172.17.0.3 4    map[]}, Dst Port: 41682, Dst Proto: 0
+Meta Event Created: {0xc003ae2fc0 172.17.0.2 172.17.0.3 pinger pinger2}
+
+
+ STOPPING TRACE AND GENERATING GRAPHS
+STARTING GRAPH GENERATION
+Trying to make edge from pinger to pinger2
+Trying to make edge from pinger to 142.250.67.206
+Trying to make edge from HOST to net_c
+Trying to make edge from HOST to net_c2
+Trying to make edge from HOST to pinger
+Trying to make edge from HOST to pinger2
+Trying to make edge from pinger2 to pinger

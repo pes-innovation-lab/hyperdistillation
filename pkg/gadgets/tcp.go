@@ -59,31 +59,37 @@ func TraceTcp() {
 			metaEvent.SrcContainerName = hostName
 		} else {
 			metaEvent.SrcIp = event.SrcEndpoint.Addr
-			metaEvent.SrcContainerName = metaEvent.SrcIp
+			metaEvent.SrcContainerName = event.SrcEndpoint.Addr
 		}
 
 		dstContainerName, isContainer := containerNameIP[event.DstEndpoint.Addr]
 		_, isHost = hostAddresses[event.DstEndpoint.Addr]
 		if isContainer {
 			metaEvent.DstIp = event.DstEndpoint.Addr
-			metaEvent.DstContainerName = srcContainerName
+			metaEvent.DstContainerName = dstContainerName
 		} else if isHost {
 			metaEvent.DstIp = hostIP
 			metaEvent.DstContainerName = hostName
 		} else {
 			metaEvent.DstIp = event.DstEndpoint.Addr
-			metaEvent.DstContainerName = metaEvent.DstIp
+			metaEvent.DstContainerName = event.DstEndpoint.Addr
 		}
 
-		// Store all events
-		tcpEvents = append(tcpEvents, &metaEvent)
+		if !(metaEvent.SrcContainerName == hostName && !isContainer) {
+			// Store all events
+			tcpEvents = append(tcpEvents, &metaEvent)
+		}
 
-		fmt.Printf("Docker API: Src Container Name: %s, Dst Container Name: %s", srcContainerName, dstContainerName)
-		fmt.Printf("Docker API: Src Container IP: %s, Dst Container IP: %s", metaEvent.SrcIp, metaEvent.DstIp)
-		// fmt.Printf("\nTrace Data: Runtime: %s, Container ID: %s, Container Name: %s, Container Image Name: %s, Container Image Digest: %s\n", event.Runtime.RuntimeName, event.Runtime.ContainerID, event.Runtime.ContainerName, event.Runtime.ContainerImageName, event.Runtime.ContainerImageDigest)
+		// tcpEvents = append(tcpEvents, &metaEvent)
+
+		fmt.Printf("\n\nDocker API: Src Container Name: %s, Dst Container Name: %s\n", srcContainerName, dstContainerName)
+		fmt.Printf("Docker API: Src Container IP: %s, Dst Container IP: %s\n", metaEvent.SrcIp, metaEvent.DstIp)
+		fmt.Printf("\nTrace Data: Runtime: %s, Container ID: %s, Container Name: %s, Container Image Name: %s, Container Image Digest: %s\n", event.Runtime.RuntimeName, event.Runtime.ContainerID, event.Runtime.ContainerName, event.Runtime.ContainerImageName, event.Runtime.ContainerImageDigest)
 		fmt.Printf("Trace Data: Timestamp: %v, Type: %s, Message: %s, Mount Namespace: %v\n", event.Timestamp, event.Type, event.Message, event.MountNsID)
 		fmt.Printf("Trace Data: Operation: %s, Pid: %d, Uid: %d ,Gid: %d, Comm: %s, IP version: %d\n", event.Operation, event.Pid, event.Uid, event.Gid, event.Comm, event.IPVersion)
 		fmt.Printf("Trace Data: Src Endpoint: %v, Src Port: %d, Src Proto: %d, Dst Endpoint: %v, Dst Port: %d, Dst Proto: %d\n", event.SrcEndpoint.L3Endpoint, event.SrcEndpoint.Port, event.SrcEndpoint.Proto, event.DstEndpoint.L3Endpoint, event.DstEndpoint.Port, event.DstEndpoint.Proto)
+
+		fmt.Printf("Meta Event Created: %v\n", metaEvent)
 	}
 
 	// Create the tracer. An empty configuration is passed as we are

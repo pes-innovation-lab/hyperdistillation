@@ -1,0 +1,36 @@
+strict digraph {
+
+
+	"pinger2" [  weight=0 ];
+
+	"pinger2" -> "142.250.67.206" [  weight=0 ];
+
+	"pinger2" -> "pinger" [  weight=0 ];
+
+	"142.250.67.206" [  weight=0 ];
+
+	"pinger" [  weight=0 ];
+
+	"pinger" -> "HOST" [  weight=0 ];
+
+	"pinger" -> "142.250.67.206" [  weight=0 ];
+
+	"pinger" -> "pinger2" [  weight=0 ];
+
+	"net_c2" [  weight=0 ];
+
+	"net_c2" -> "HOST" [  weight=0 ];
+
+	"HOST" [  weight=0 ];
+
+	"HOST" -> "net_c2" [  weight=0 ];
+
+	"HOST" -> "pinger" [  weight=0 ];
+
+	"HOST" -> "net_c" [  weight=0 ];
+
+	"net_c" [  weight=0 ];
+
+	"net_c" -> "HOST" [  weight=0 ];
+
+}
