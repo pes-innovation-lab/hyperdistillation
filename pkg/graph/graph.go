@@ -10,10 +10,18 @@ import (
 	"github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/tcp/types"
 )
 
+type MetaEvent struct {
+	Event            *types.Event
+	SrcIp            string
+	DstIp            string
+	SrcContainerName string
+	DstContainerName string
+}
+
 // Contains information about one node in the graph
 type graphNode struct {
-	Event *types.Event
-	ip    string
+	ip            string
+	containerName string
 }
 
 // Enum to denote IP type as source or destination
@@ -24,63 +32,67 @@ const (
 	dst
 )
 
-func GenerateGraph(events []*types.Event) {
+func GenerateGraph(events []*MetaEvent) {
 	fmt.Printf("STARTING GRAPH GENERATION\n")
 
-	ipHash := func(addr string) string {
-		return addr
+	nodeHash := func(nodeInfo string) string {
+		return nodeInfo
 	}
 
 	// Initialise graph
-	g := graph.New(ipHash, graph.Directed(), graph.PreventCycles())
+	g := graph.New(nodeHash, graph.Directed(), graph.PreventCycles())
 
 	// Create a hashmap to keep track of all nodes in the graph
 	nodeMap := make(map[string]graphNode)
 
 	for _, event := range events {
 
-		if event.Operation == "close" {
+		if event.Event.Operation == "close" {
 			continue
 		}
 
-		srcIp := getIp(event, src)
-		dstIp := getIp(event, dst)
+		// srcIp := getIp(graphNode.Event, src)
+		// dstIp := getIp(graphNode.Event, dst)
 
-		srcIp, dstIp = appendPorts(event, srcIp, dstIp)
+		// srcIp, dstIp = appendPorts(event, srcIp, dstIp)
 
 		// If the ip is already a node then don't add another node
-		_, ok := nodeMap[srcIp]
+		_, ok := nodeMap[event.SrcContainerName]
 		if !ok {
 			// If IP is localhost, then append port to the end
 
 			// create node in the graph
-			err := g.AddVertex(srcIp)
+			err := g.AddVertex(event.SrcContainerName)
 			if err != nil {
 				panic(err)
 			}
 
 			// Add node in out map
-			nodeMap[srcIp] = graphNode{
-				Event: event,
-				ip:    srcIp,
+			nodeMap[event.SrcContainerName] = graphNode{
+				ip:            event.SrcIp,
+				containerName: event.SrcContainerName,
 			}
 		}
-		_, ok = nodeMap[dstIp]
+		_, ok = nodeMap[event.DstContainerName]
 		if !ok {
-			err := g.AddVertex(dstIp)
+			// If IP is localhost, then append port to the end
+
+			// create node in the graph
+			err := g.AddVertex(event.DstContainerName)
 			if err != nil {
 				panic(err)
 			}
 
-			nodeMap[dstIp] = graphNode{
-				Event: event,
-				ip:    dstIp,
+			// Add node in out map
+			nodeMap[event.DstContainerName] = graphNode{
+				ip:            event.DstIp,
+				containerName: event.DstContainerName,
 			}
 		}
 
-		err := g.AddEdge(srcIp, dstIp)
+		err := g.AddEdge(event.SrcContainerName, event.DstContainerName)
 		if err != nil {
-			// panic(err)
+			continue
 		}
 	}
 

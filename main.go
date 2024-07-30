@@ -1,6 +1,8 @@
 package main
 
-import "github.com/PES-Innovation-Lab/hyperdistillation/pkg/gadgets"
+import (
+	"github.com/PES-Innovation-Lab/hyperdistillation/pkg/gadgets"
+)
 
 func main() {
 	gadgets.TraceTcp()

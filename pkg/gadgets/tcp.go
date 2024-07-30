@@ -6,11 +6,21 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/PES-Innovation-Lab/hyperdistillation/pkg/dockerinfo"
 	"github.com/PES-Innovation-Lab/hyperdistillation/pkg/graph"
 	"github.com/cilium/ebpf/rlimit"
 
 	"github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/tcp/tracer"
 	"github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/tcp/types"
+)
+
+const (
+	// The IP assoicated with all non-docker IP tcp events
+	hostIP = "127.0.0.1"
+
+	// The name used in the SrcContainerName/DstContainerName fields of the MetaEvent struct
+	// when the tcp event is not associated with the container
+	hostName = "HOST"
 )
 
 func TraceTcp() {
@@ -20,17 +30,47 @@ func TraceTcp() {
 		return
 	}
 
-	var tcpEvents []*types.Event
+	var tcpEvents []*graph.MetaEvent
 
 	// Define a callback to be called each time there is an event.
 	eventCallback := func(event *types.Event) {
-		// Store all events
-		tcpEvents = append(tcpEvents, event)
+		containerNameIP, err := dockerinfo.GetContainerData()
 
-		fmt.Printf("\nRuntime: %s, Container ID: %s, Container Name: %s, Container Image Name: %s, Container Image Digest: %s\n", event.Runtime.RuntimeName, event.Runtime.ContainerID, event.Runtime.ContainerName, event.Runtime.ContainerImageName, event.Runtime.ContainerImageDigest)
-		fmt.Printf("Timestamp: %v, Type: %s, Message: %s, Mount Namespace: %v\n", event.Timestamp, event.Type, event.Message, event.MountNsID)
-		fmt.Printf("Operation: %s, Pid: %d, Uid: %d ,Gid: %d, Comm: %s, IP version: %d\n", event.Operation, event.Pid, event.Uid, event.Gid, event.Comm, event.IPVersion)
-		fmt.Printf("Src Endpoint: %v, Src Port: %d, Src Proto: %d, Dst Endpoint: %v, Dst Port: %d, Dst Proto: %d\n", event.SrcEndpoint.L3Endpoint, event.SrcEndpoint.Port, event.SrcEndpoint.Proto, event.DstEndpoint.L3Endpoint, event.DstEndpoint.Port, event.DstEndpoint.Proto)
+		if err != nil {
+			fmt.Printf("error: %v", err)
+		}
+
+		metaEvent := graph.MetaEvent{
+			Event: event,
+		}
+
+		srcContainerName, ok := containerNameIP[event.SrcEndpoint.Addr]
+		if ok {
+			metaEvent.SrcIp = event.SrcEndpoint.Addr
+			metaEvent.SrcContainerName = srcContainerName
+		} else {
+			metaEvent.SrcIp = hostIP
+			metaEvent.SrcContainerName = hostName
+		}
+
+		dstContainerName, ok := containerNameIP[event.DstEndpoint.Addr]
+		if ok {
+			metaEvent.DstIp = event.DstEndpoint.Addr
+			metaEvent.DstContainerName = dstContainerName
+		} else {
+			metaEvent.DstIp = hostIP
+			metaEvent.DstContainerName = hostName
+		}
+
+		// Store all events
+		tcpEvents = append(tcpEvents, &metaEvent)
+
+		fmt.Printf("Docker API: Src Container Name: %s, Dst Container Name: %s", srcContainerName, dstContainerName)
+		fmt.Printf("Docker API: Src Container IP: %s, Dst Container IP: %s", metaEvent.SrcIp, metaEvent.DstIp)
+		// fmt.Printf("\nTrace Data: Runtime: %s, Container ID: %s, Container Name: %s, Container Image Name: %s, Container Image Digest: %s\n", event.Runtime.RuntimeName, event.Runtime.ContainerID, event.Runtime.ContainerName, event.Runtime.ContainerImageName, event.Runtime.ContainerImageDigest)
+		fmt.Printf("Trace Data: Timestamp: %v, Type: %s, Message: %s, Mount Namespace: %v\n", event.Timestamp, event.Type, event.Message, event.MountNsID)
+		fmt.Printf("Trace Data: Operation: %s, Pid: %d, Uid: %d ,Gid: %d, Comm: %s, IP version: %d\n", event.Operation, event.Pid, event.Uid, event.Gid, event.Comm, event.IPVersion)
+		fmt.Printf("Trace Data: Src Endpoint: %v, Src Port: %d, Src Proto: %d, Dst Endpoint: %v, Dst Port: %d, Dst Proto: %d\n", event.SrcEndpoint.L3Endpoint, event.SrcEndpoint.Port, event.SrcEndpoint.Proto, event.DstEndpoint.L3Endpoint, event.DstEndpoint.Port, event.DstEndpoint.Proto)
 	}
 
 	// Create the tracer. An empty configuration is passed as we are

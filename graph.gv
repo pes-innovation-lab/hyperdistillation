@@ -1,0 +1,10 @@
+strict digraph {
+
+
+	"HOST" [  weight=0 ];
+
+	"pinger" [  weight=0 ];
+
+	"pinger" -> "HOST" [  weight=0 ];
+
+}
