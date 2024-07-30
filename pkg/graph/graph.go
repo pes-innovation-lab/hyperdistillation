@@ -79,6 +79,7 @@ func GenerateGraph(events []*MetaEvent) {
 
 			// create node in the graph
 			err := g.AddVertex(event.DstContainerName)
+			fmt.Println("adding ")
 			if err != nil {
 				panic(err)
 			}

@@ -6,7 +6,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/PES-Innovation-Lab/hyperdistillation/pkg/dockerinfo"
+	"github.com/PES-Innovation-Lab/hyperdistillation/pkg/data"
 	"github.com/PES-Innovation-Lab/hyperdistillation/pkg/graph"
 	"github.com/cilium/ebpf/rlimit"
 
@@ -34,7 +34,7 @@ func TraceTcp() {
 
 	// Define a callback to be called each time there is an event.
 	eventCallback := func(event *types.Event) {
-		containerNameIP, err := dockerinfo.GetContainerData()
+		containerNameIP, err := data.GetContainerData()
 
 		if err != nil {
 			fmt.Printf("error: %v", err)
@@ -44,22 +44,35 @@ func TraceTcp() {
 			Event: event,
 		}
 
-		srcContainerName, ok := containerNameIP[event.SrcEndpoint.Addr]
-		if ok {
-			metaEvent.SrcIp = event.SrcEndpoint.Addr
-			metaEvent.SrcContainerName = srcContainerName
-		} else {
-			metaEvent.SrcIp = hostIP
-			metaEvent.SrcContainerName = hostName
+		hostAddresses, err := data.GetHostIPs()
+		if err != nil {
+			fmt.Printf("error: %v", err)
 		}
 
-		dstContainerName, ok := containerNameIP[event.DstEndpoint.Addr]
-		if ok {
-			metaEvent.DstIp = event.DstEndpoint.Addr
-			metaEvent.DstContainerName = dstContainerName
+		srcContainerName, isContainer := containerNameIP[event.SrcEndpoint.Addr]
+		_, isHost := hostAddresses[event.SrcEndpoint.Addr]
+		if isContainer {
+			metaEvent.SrcIp = event.SrcEndpoint.Addr
+			metaEvent.SrcContainerName = srcContainerName
+		} else if isHost {
+			metaEvent.SrcIp = hostIP
+			metaEvent.SrcContainerName = hostName
 		} else {
+			metaEvent.SrcIp = event.SrcEndpoint.Addr
+			metaEvent.SrcContainerName = metaEvent.SrcIp
+		}
+
+		dstContainerName, isContainer := containerNameIP[event.DstEndpoint.Addr]
+		_, isHost = hostAddresses[event.DstEndpoint.Addr]
+		if isContainer {
+			metaEvent.DstIp = event.DstEndpoint.Addr
+			metaEvent.DstContainerName = srcContainerName
+		} else if isHost {
 			metaEvent.DstIp = hostIP
 			metaEvent.DstContainerName = hostName
+		} else {
+			metaEvent.DstIp = event.DstEndpoint.Addr
+			metaEvent.DstContainerName = metaEvent.DstIp
 		}
 
 		// Store all events

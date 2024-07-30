@@ -1,4 +1,4 @@
-package dockerinfo
+package data
 
 import (
 	"context"
