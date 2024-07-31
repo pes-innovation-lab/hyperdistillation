@@ -110,9 +110,9 @@ func TraceTcp() {
 	go func() {
 		<-sigChan
 
-		fmt.Printf("\n\n STOPPING TRACE AND GENERATING GRAPHS\n")
-		graph.GenerateGraph(tcpEvents)
+		fmt.Printf("\n\nSTOPPING TRACE AND GENERATING LOGS\n")
 		tracer.Stop()
+		data.MarshalMetaEvent(data.DefaultFileName, tcpEvents)
 
 		exit <- struct{}{}
 	}()
