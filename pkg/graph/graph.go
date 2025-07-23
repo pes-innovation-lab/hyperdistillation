@@ -3,15 +3,16 @@ package graph
 import (
 	"fmt"
 	"os"
-	"strconv"
+
+	// "strconv"
 
 	"github.com/dominikbraun/graph"
 	"github.com/dominikbraun/graph/draw"
-	"github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/tcp/types"
+	// "github.com/inspektor-gadget/inspektor-gadget/pkg/gadgets/trace/tcp/types"
 )
 
 type MetaEvent struct {
-	Event            *types.Event
+	Type             string
 	SrcIp            string
 	DstIp            string
 	SrcContainerName string
@@ -46,8 +47,8 @@ func GenerateGraph(events []*MetaEvent) {
 	nodeMap := make(map[string]graphNode)
 
 	for _, event := range events {
-		// Ignoring tcp "close events"
-		if event.Event.Operation == "close" || event.Event.Operation == "accept" {
+		// Ignoring TCP "close events"
+		if event.Type == "close" || event.Type == "accept" {
 			continue
 		}
 
@@ -99,21 +100,21 @@ func GenerateGraph(events []*MetaEvent) {
 	}
 }
 
-func getIp(event *types.Event, srcOrDst srcOrDst) string {
-	if srcOrDst == src {
-		return event.SrcEndpoint.L3Endpoint.Addr
-	} else {
-		return event.DstEndpoint.L3Endpoint.Addr
-	}
-}
+// func getIp(event *types.Event, srcOrDst srcOrDst) string {
+// 	if srcOrDst == src {
+// 		return event.SrcEndpoint.L3Endpoint.Addr
+// 	} else {
+// 		return event.DstEndpoint.L3Endpoint.Addr
+// 	}
+// }
 
-func appendPorts(event *types.Event, srcIp string, dstIp string) (string, string) {
-	if !(srcIp == dstIp) {
-		return srcIp, dstIp
-	}
+// func appendPorts(event *types.Event, srcIp string, dstIp string) (string, string) {
+// 	if !(srcIp == dstIp) {
+// 		return srcIp, dstIp
+// 	}
 
-	appSrcIp := srcIp + ":" + strconv.FormatUint(uint64(event.SrcEndpoint.Port), 10)
-	appDstIp := dstIp + ":" + strconv.FormatUint(uint64(event.DstEndpoint.Port), 10)
+// 	appSrcIp := srcIp + ":" + strconv.FormatUint(uint64(event.SrcEndpoint.Port), 10)
+// 	appDstIp := dstIp + ":" + strconv.FormatUint(uint64(event.DstEndpoint.Port), 10)
 
-	return appSrcIp, appDstIp
-}
+// 	return appSrcIp, appDstIp
+// }
